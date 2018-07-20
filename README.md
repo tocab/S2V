@@ -1,3 +1,18 @@
+# Quick-Thought Vectors Fork
+
+This fork changes the way the input data is formatted and adds some new
+input pipeline techniques like tensorflows dataset api.
+
+Main intention for that is that the original implementation doesn't
+recognize document borders. Since this is ok for long documents like books,
+it can be problematic for documents which contain only a few sentences.
+
+The solution for this is to process only one document in a batch, so that
+document overlapping sentences cannot occur.
+
+Other changes:
+* compatible to Python 3
+
 # Quick-Thought Vectors
 
 This is a TensorFlow implementation accompanying our paper
